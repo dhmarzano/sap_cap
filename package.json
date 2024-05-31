@@ -13,6 +13,16 @@
   "devDependencies": {
     "@cap-js/sqlite": "^1.7.1"
   },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db.sqlite"
+        }
+      }
+    }
+  },
   "scripts": {
     "start": "cds-serve"
   }
