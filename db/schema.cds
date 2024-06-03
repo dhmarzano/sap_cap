@@ -30,13 +30,19 @@ entity Details : cuid, managed {
 }
 
 entity Products : cuid, managed {
+   ImageUrl     : String(600);
    Product      : String(80);
    Description  : String(500);
    Category     : String;
    SubCategory  : String;
    Availibility : String;
    Rating       : Double;
+
+   @Measures.Unit: Unit
    Price        : Decimal(10, 2);
+
+   @Common.IsCurrency
+   Unit         : String(3) default 'USD';
    Supplier     : Association to Suppliers;
 }
 
